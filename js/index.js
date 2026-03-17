@@ -1,3 +1,4 @@
+
 const loadCategories = () => {
     fetch("https://openapi.programming-hero.com/api/categories")
     .then((res) => res.json())
@@ -12,6 +13,12 @@ const loadPlants = (id) => {
     .then((json) => displayPlantsCategory(json.plants))
 };
 
+const loadRandomPlants = () => {
+    fetch("https://openapi.programming-hero.com/api/plants")
+    .then((res) => res.json())
+    .then((json) => displayPlantsCategory(json.plants))
+}
+
 const displayCategories = (lessons) => {
     const categoriesContainer = document.getElementById("categories-container");
     categoriesContainer.innerHTML = "";
@@ -20,7 +27,7 @@ const displayCategories = (lessons) => {
         console.log(lesson);
         const btnDiv = document.createElement("div");
         btnDiv.innerHTML = `
-            <button onclick="loadPlants(${lesson.id})" class="bg-transparent text-xl text-black px-15 py-2 rounded-md font-medium hover:bg-[#15803D] hover:text-white transition-all duration-300">
+            <button onclick="loadPlants(${lesson.id})" class="bg-transparent text-2xl text-black px-15 py-2 rounded-md text-gray-500 hover:bg-[#15803D] hover:text-white transition-all duration-300">
                      ${lesson.category_name}
                 </button>
 
@@ -32,14 +39,6 @@ const displayCategories = (lessons) => {
 
 };
 
-// {
-// "id": 1,
-// "image": "https://i.ibb.co.com/cSQdg7tf/mango-min.jpg",
-// "name": "Mango Tree",
-// "description": "A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green canopy offers shade, while its sweet fruits are rich in vitamins and minerals.",
-// "category": "Fruit Tree",
-// "price": 500
-// },
 const displayPlantsCategory = (Plants) => {
     const plantsContainer = document.getElementById("plants-container");
     plantsContainer.innerHTML = "";
@@ -58,7 +57,7 @@ const displayPlantsCategory = (Plants) => {
                         <p>${Plant.description}</p>
                         <div class="flex justify-between">
                             <button class="btn bg-[#DCFCE7] rounded-4xl">${Plant.category}</button>
-                            <h2 class="text-xl">$ ${Plant.price}</h2>
+                            <h2 class="text-xl">$ ${Plant.price} BDT</h2>
                         </div>
                         <button class="text-white text-xl btn bg-[#15803D] rounded-4xl h-14">Add to Cart</button>
                     </div>
@@ -71,3 +70,4 @@ const displayPlantsCategory = (Plants) => {
 }
 
 loadCategories();
+loadRandomPlants();

@@ -63,26 +63,26 @@
         <!-- section-2 -->
     <section class="bg-[#F0FDF4] w-full p-4">
         <h2 class="flex justify-center text-4xl font-bold mt-10 ">Choose Your Trees</h2>
-        <div class="flex py-6 ">
+        <div class=" flex flex-col md:flex-row gap-6 p-4 py-6 ">
             <div class="">
-                <h2 class="px-14 font-bold text-2xl">Categories</h2>
+                <h2 class="px-14 font-bold text-3xl">Categories</h2>
                 <div>
-                    <button class="bg-transparent text-black text-xl px-15 py-2 rounded-md font-medium hover:bg-[#15803D] hover:text-white transition-all duration-300">
+                    <button class="bg-transparent text-black text-2xl text-gray-400 px-15 py-2 rounded-md hover:bg-[#15803D] hover:text-white transition-all duration-300">
                         Click Me
                     </button>
                 </div>
                 <div id="categories-container" class="py-2">
-                    <!-- <button class="bg-transparent text-black px-15 py-2 rounded-md font-medium hover:bg-[#15803D] hover:text-white transition-all duration-300">
+                    <!-- <button class="bg-transparent text-black px-15 py-2 rounded-md font-semibold hover:bg-[#15803D] hover:text-white transition-all duration-300">
                         Click Me
                     </button> -->
                 </div>
-            
+            <!-- grid grid-cols-3 gap-6 -->
             </div>
 
             
-            <div id="plants-container" class="grid grid-cols-3 gap-6">
+            <div id="plants-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- <div  class="card bg-base-100 w-100 h-125 shadow-sm rounded-2xl py-6">
-                    <figure class="px-10 pt-10s">
+                    <figure class="px-10 pt-10">
                         <img
                         src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
                         >
@@ -99,9 +99,15 @@
                 </div> -->
 
             </div>
-
-            <div class="bg-base-100">
-
+            <div class="card bg-base-100 w-[300px] h-[800px] flex flex-col items-center shadow-sm rounded-2xl py-6 gap-6">
+                <h1 class=" text-3xl font-medium px-10">Your Cart</h1>
+                <div class=" flex justify-between bg-[#F0FDF4] w-60 h-20 rounded-lg shadow-md gap-6 py-3 px-3">
+                    <div class="">
+                        <h2 class="text-xl font-medium">Mango Tree</h2>
+                        <p class="text-xl text-gray-400">$500x1</p>
+                    </div>
+                    <h2 class=" py-3">X</h2>
+                </div>
             </div>
         </div>
     </section>
