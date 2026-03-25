@@ -62,15 +62,15 @@
     </section>
         <!-- section-2 -->
     <section class="bg-[#F0FDF4] w-full p-4">
-        <h2 class="flex justify-center text-4xl font-bold mt-10 ">Choose Your Trees</h2>
+        <h2 class="flex justify-center text-4xl font-semibold mt-10 ">Choose Your Trees</h2>
         <div class=" flex flex-col md:flex-row gap-6 p-4 py-6 ">
             <div class="">
                 <h2 class="px-14 font-bold text-3xl">Categories</h2>
-                <div>
-                    <button class="bg-transparent text-black text-2xl text-gray-400 px-15 py-2 rounded-md hover:bg-[#15803D] hover:text-white transition-all duration-300">
+                <!-- <div id="all-container" class="py-2">
+                     <button class="bg-transparent text-black text-2xl text-gray-400 px-15 py-2 rounded-md hover:bg-[#15803D] hover:text-white transition-all duration-300">
                         Click Me
-                    </button>
-                </div>
+                    </button> 
+                </div> -->
                 <div id="categories-container" class="py-2">
                     <!-- <button class="bg-transparent text-black px-15 py-2 rounded-md font-semibold hover:bg-[#15803D] hover:text-white transition-all duration-300">
                         Click Me
@@ -78,9 +78,11 @@
                 </div>
             <!-- grid grid-cols-3 gap-6 -->
             </div>
-
+            
+            
             
             <div id="plants-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
                 <!-- <div  class="card bg-base-100 w-100 h-125 shadow-sm rounded-2xl py-6">
                     <figure class="px-10 pt-10">
                         <img
@@ -99,18 +101,80 @@
                 </div> -->
 
             </div>
-            <div class="card bg-base-100 w-[300px] h-[800px] flex flex-col items-center shadow-sm rounded-2xl py-6 gap-6">
+            <div class="card bg-base-100 w-[300px] h-auto flex flex-col items-center shadow-sm rounded-2xl py-6 gap-6">
                 <h1 class=" text-3xl font-medium px-10">Your Cart</h1>
-                <div class=" flex justify-between bg-[#F0FDF4] w-60 h-20 rounded-lg shadow-md gap-6 py-3 px-3">
-                    <div class="">
-                        <h2 class="text-xl font-medium">Mango Tree</h2>
-                        <p class="text-xl text-gray-400">$500x1</p>
-                    </div>
-                    <h2 class=" py-3">X</h2>
+                <div class="" id="cart-container">
+                    <!-- <div class=" flex justify-between bg-[#F0FDF4] w-60 h-20 rounded-lg shadow-md gap-6 py-3 px-3">
+                        <div class="">
+                            <h2 class="text-xl font-medium">Mango Tree</h2>
+                            <p class="text-xl text-gray-400">$500x1</p>
+                        </div>
+                        <h2 class=" py-3">X</h2>
+                    </div> -->
+                </div>
+                <div class="flex justify-between gap-20">
+                    <h2 class="text-xl font-semibold">Total:</h2>
+                    <h2 class="text-xl font-semibold">$ <span id="cart-total">0</span> BDT</h2>
                 </div>
             </div>
         </div>
     </section>
+    <!-- The button to open modal -->
+
+    <!-- <label for="my_modal_6" class="btn">open modal</label> -->
+
+    <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+        <div class="modal" role="dialog">
+        <div id="details-container" class="modal-box">
+            <!-- <div>
+                <h2 class="text-xl font-bold">Banyan Tree</h2>
+                <img src="https://i.ibb.co.com/0jLycYdv/Water-Hyacinth-min.jpg" alt="">
+                <h2><span class="font-bold">Category:</span> Shade Tree</h2>
+                <h2><span class="font-bold">Price:</span>$1200 BDT</h2>
+                <p><span class="font-bold">Description:</span></p>
+            </div>
+             
+            <div class="modal-action">
+                <label for="my_modal_6" class="btn">Close!</label>
+            </div> -->
+        </div>
+    </div>
+
+    <section class="bg-[#F0FDF4] w-full p-10 flex flex-col items-center">
+        <h2 class="text-4xl font-bold ">About the Campaign</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl mx-auto p-8 rounded-2xl">
+            <div>
+                <img class="h-125 w-300" src="assets/about.png" alt="">
+            </div>
+            <div>
+                <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
+                <ul class="list-disc ml-8 mt-5">
+                    <li>Restoration of natural habitats</li>
+                    <li>Improvement of air quality</li>
+                    <li>Support for local communities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#CFF0DC] w-full p-10 flex flex-col items-center ">
+        <h2 class="text-4xl font-bold">Our Impact</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10 mt-5">
+            <div class=" bg-white w-112 h-40 rounded-xl mr-12">
+                <h2 class="flex justify-center items-center pt-12 text-3xl font-semibold text-[#15803D]">500k +</h2>
+                <p class="flex justify-center items-center ">Tree Planted</p>
+            </div>
+            <div class=" bg-white w-112 h-40 rounded-xl mr-12">
+                <h2 class="flex justify-center items-center pt-12 text-3xl font-semibold text-[#15803D]">120  +</h2>
+                <p class="flex justify-center items-center ">Communities Involved</p>
+            </div>
+             <div class=" bg-white w-112 h-40 rounded-xl mr-12">
+                <h2 class="flex justify-center items-center pt-12 text-3xl font-semibold text-[#15803D]">30 +</h2>
+                <p class="flex justify-center items-center ">Countries Reached</p>
+            </div>
+        </div>
+    </section>
+
     <script src="js/index.js"></script>
 </body>
 </html>
